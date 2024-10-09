@@ -28,21 +28,22 @@ export default function Login() {
         </View>
       
         {/* Form */}
-        <View style={{ alignItems: 'center', marginHorizontal: 16, spaceY: 16 }}>
-          <Animated.View entering={FadeInDown.duration(1000).springify()} style={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: 15, borderRadius: 15, width: '90%' }}>
+        <View style={{ alignItems: 'center', marginHorizontal: 16 }}>
+          <Animated.View entering={FadeInDown.duration(1000).springify()} style={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: 15, borderRadius: 15, width: '90%', marginBottom: 16 }}>
             <TextInput placeholder="email" placeholderTextColor={"black"} style={{ height: 40 }} />
           </Animated.View>
           <Animated.View entering={FadeInDown.delay(200).duration(1000).springify()} style={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: 15, borderRadius: 15, width: '90%' }}>
             <TextInput placeholder="password" placeholderTextColor={"black"} secureTextEntry style={{ height: 40 }} />
           </Animated.View>
         </View>
-        <Animated.View entering={FadeInDown.delay(400).duration(1000).springify()} style={{ width: '90%' }}>
-          <TouchableOpacity style={{ width: '100%', backgroundColor: '#38BDF8', padding: 10, borderRadius: 15, marginBottom: 12 }}>
-            <Text style={{ fontSize: height * 0.025, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
-              Login
-            </Text>
-          </TouchableOpacity>
-        </Animated.View>
+        <Animated.View entering={FadeInDown.delay(400).duration(1000).springify()} style={{ alignItems: 'center', width: '100%' }}>
+  <TouchableOpacity style={{ width: '90%', backgroundColor: '#38BDF8', padding: 10, borderRadius: 15, marginBottom: 12, marginHorizontal: 'auto' }}>
+    <Text style={{ fontSize: height * 0.025, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
+      Login
+    </Text>
+  </TouchableOpacity>
+</Animated.View>
+
         <Animated.View entering={FadeInDown.delay(600).duration(1000).springify()} style={{ flexDirection: 'row', justifyContent: 'center' }}>
           <Text>Don't have an account?</Text>
           <TouchableOpacity onPress={() => navigation.push('SignUp')}>
